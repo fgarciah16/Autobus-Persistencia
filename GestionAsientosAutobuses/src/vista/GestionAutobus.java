@@ -49,13 +49,15 @@ public class GestionAutobus extends javax.swing.JFrame {
         AsignarPasaje asignar= new AsignarPasaje();
         Boletos boleto= new Boletos();
         Cancelacion cancelar= new Cancelacion();
+        CambiarBoleto cambio = new CambiarBoleto();
         cancelar.conectaCorridas(corridas);
         contenedor.add("Boletos",principal);
-        contenedor.add("vista.Corridass",corridas);
+        contenedor.add("Corridass",corridas);
         contenedor.add("Reserva",reserva);
         contenedor.add("Asignar Pasaje",asignar);
         contenedor.add("Boletos",boleto);
         contenedor.add("Cancelar",cancelar);
+        contenedor.add("Cambiar Boleto", cambio);
         principal.conectaCorridas(corridas);
         corridas.conectaInicio(principal);
         corridas.conectaReserva(reserva);
